@@ -1,0 +1,61 @@
+/* ── Reset ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Courier New', Courier, monospace; }
+
+/* ── Page ── */
+.congrats-page {
+  min-height: 100vh;
+  background-image: url('../images/congrat2Bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+}
+
+/* ── Content card ── */
+.congrats-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  max-width: 700px;
+}
+
+/* ── Heading ── */
+.congrats-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.04em;
+}
+
+/* ── Paragraph ── */
+.congrats-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Button ── */
+.congrats-btn {
+  display: inline-block;
+  background-color: #F6CE18;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 48px;
+  border-radius: 40px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+.congrats-btn:hover { background-color: #d4ae00; transform: translateY(-2px); }
+.congrats-btn:active { transform: translateY(0); }

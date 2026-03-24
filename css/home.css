@@ -1,0 +1,111 @@
+/* ── Global Reset ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+}
+
+/* ── Section 1 – Intro ── */
+.intro-section {
+  min-height: 100vh;
+  background-image: url('../images/introBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-content {
+  max-width: 780px;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.intro-content p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.scroll-hint {
+  display: block;
+  margin-top: 36px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.04em;
+}
+
+/* ── Section 2 – Welcome ── */
+.welcome-section {
+  min-height: 100vh;
+  background-image: url('../images/welcomeBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-content {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.welcome-label {
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  margin-bottom: 12px;
+}
+
+.welcome-title {
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  margin-bottom: 16px;
+}
+
+.welcome-tagline {
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  margin-bottom: 40px;
+}
+
+/* ── Explore Button ── */
+.explore-btn {
+  display: inline-block;
+  background-color: #FFFBFB;
+  color: #1a1a2e;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 14px 42px;
+  border-radius: 40px;
+  letter-spacing: 0.04em;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.explore-btn:hover {
+  background-color: #e8e4e4;
+  transform: translateY(-2px);
+}
+
+.explore-btn:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyVerse - Game: Outer Planets</title>
+    <link rel="stylesheet" href="css/game2.css?v=4" />
+    <link rel="stylesheet" href="css/sidebar.css?v=6" />
+  </head>
+  <body>
+    <section class="game-page">
+      <h1 class="page-heading">Game: Outer Planets</h1>
+
+      <div class="game-container" id="gameContainer">
+        <!-- Top bar -->
+        <div class="game-topbar">
+          <button class="fullscreen-btn" onclick="toggleFullscreen()">Play Full Screen</button>
+        </div>
+
+        <!-- Game area -->
+        <div class="game-area">
+          <h2 class="game-title">Planet Size Challenge</h2>
+          <p class="game-subtitle">
+            Can you rank the planets from smallest to largest?
+            Drag and drop them in the right boxes
+          </p>
+
+          <!-- Draggable planet bank -->
+          <div class="planets-row" id="planetsRow"></div>
+
+          <!-- Drop zones (no sun for this one) -->
+          <div class="dropzones" id="dropzones"></div>
+        </div>
+
+        <section class="quiz-section" id="quizSection" aria-labelledby="quizTitle">
+          <div class="quiz-panel">
+            <div class="quiz-header">
+              <h3 id="quizTitle">Outer Planets Quiz</h3>
+            </div>
+
+            <p class="quiz-intro">Answer these 3 questions as part of the game. To continue, submit the quiz and complete the planet size challenge.</p>
+
+            <form class="quiz-form" id="quizForm">
+              <fieldset class="quiz-question">
+                <legend>1. How many moons does Jupiter have?</legend>
+                <label><input type="radio" name="q1" value="95" required /> 95</label>
+                <label><input type="radio" name="q1" value="12" /> 12</label>
+                <label><input type="radio" name="q1" value="47" /> 47</label>
+              </fieldset>
+
+              <fieldset class="quiz-question">
+                <legend>2. Which planet is famous for its bright rings?</legend>
+                <label><input type="radio" name="q2" value="saturn" required /> Saturn</label>
+                <label><input type="radio" name="q2" value="mars" /> Mars</label>
+                <label><input type="radio" name="q2" value="uranus" /> Uranus</label>
+              </fieldset>
+
+              <fieldset class="quiz-question">
+                <legend>3. Which planet is farthest from the Sun?</legend>
+                <label><input type="radio" name="q3" value="neptune" required /> Neptune</label>
+                <label><input type="radio" name="q3" value="venus" /> Venus</label>
+                <label><input type="radio" name="q3" value="jupiter" /> Jupiter</label>
+              </fieldset>
+
+              <p class="quiz-result" id="quizResult" aria-live="polite"></p>
+
+              <div class="quiz-actions">
+                <button type="submit" class="quiz-submit-btn explore-btn">Submit Quiz</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <!-- Shown only when game is won -->
+      <a href="congrats2.html" class="continue-btn" id="continueBtn">Continue</a>
+    </section>
+
+    <script src="js/progress.js?v=5"></script>
+    <script src="js/game2.js?v=4"></script>
+  </body>
+</html>

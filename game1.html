@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyVerse - Game: Inner Planets</title>
+    <link rel="stylesheet" href="css/game1.css" />
+    <link rel="stylesheet" href="css/sidebar.css?v=6" />
+  </head>
+  <body>
+    <section class="game-page">
+      <h1 class="page-heading">Game: Inner Planets</h1>
+
+      <div class="game-container" id="gameContainer">
+        <!-- Top bar -->
+        <div class="game-topbar">
+          <button class="fullscreen-btn" onclick="toggleFullscreen()">Play Full Screen</button>
+        </div>
+
+        <!-- Game area -->
+        <div class="game-area">
+          <h2 class="game-title">Planet Distance Challenge</h2>
+          <p class="game-subtitle">
+            Can you place the inner planets in the correct order from the Sun?
+            Drag and drop them in the right boxes
+          </p>
+
+          <!-- Draggable planet bank -->
+          <div class="planets-row" id="planetsRow"></div>
+
+          <!-- Sun + drop zones -->
+          <div class="dropzone-row">
+            <div class="sun-display">
+              <img src="images/Sun.png" alt="Sun" />
+              <span>Sun</span>
+            </div>
+            <div class="dropzones" id="dropzones"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shown only when game is won -->
+      <a href="congrats1.html" class="continue-btn" id="continueBtn">Continue</a>
+    </section>
+
+    <script src="js/progress.js?v=5"></script>
+    <script src="js/game1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+/* ── Reset ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Courier New', Courier, monospace; }
+
+/* ── Page ── */
+.final-page {
+  min-height: 100vh;
+  background-image: url('../images/missionCompBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+}
+
+/* ── Content ── */
+.final-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  max-width: 720px;
+}
+
+/* ── Heading ── */
+.final-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.04em;
+}
+
+/* ── Bold paragraph ── */
+.final-bold {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Normal paragraph ── */
+.final-text {
+  font-size: 1.15rem;
+  font-weight: normal;
+  line-height: 1.85;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Button ── */
+.final-btn {
+  display: inline-block;
+  background-color: #FFFBFB;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 48px;
+  border-radius: 40px;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+.final-btn:hover { background-color: #e8e4e4; transform: translateY(-2px); }
+.final-btn:active { transform: translateY(0); }

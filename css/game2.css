@@ -1,0 +1,275 @@
+/* ── Reset ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Courier New', Courier, monospace; }
+
+/* ── Page ── */
+.game-page {
+  min-height: 100vh;
+  background-image: url('../images/game2Bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 40px 20px;
+}
+
+.page-heading {
+  color: #ffffff;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ── Game Container ── */
+.game-container {
+  width: 100%;
+  max-width: 1040px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.55);
+}
+
+.game-topbar {
+  background-color: #1A0049;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 16px;
+}
+
+.fullscreen-btn {
+  background-color: #FFEE36;
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.fullscreen-btn:hover { background-color: #e6d700; transform: scale(1.04); }
+
+/* ── Game Area ── */
+.game-area {
+  background-color: #f0eef8;
+  padding: 32px 28px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.game-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #1A0049;
+  text-align: center;
+}
+
+.game-subtitle {
+  font-size: 0.95rem;
+  color: #1A0049;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.65;
+}
+
+/* ── Planet Bank (smaller circles for 8 planets) ── */
+.planets-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  min-height: 105px;
+  width: 100%;
+  padding: 6px;
+}
+
+/* ── Planet Item ── */
+.planet-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.15s ease;
+}
+.planet-item:active { cursor: grabbing; }
+.planet-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #1A0049;
+  border: 3px solid #1A0049;
+  display: block;
+}
+.planet-item span {
+  font-size: 0.68rem;
+  color: #1A0049;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ── Drop Zones (8 in a row) ── */
+.dropzones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.drop-zone {
+  width: 90px;
+  height: 90px;
+  border: 2px dashed #1A0049;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.4);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.drop-zone.drag-over  { border-color: #7c4dff; background-color: rgba(124,77,255,0.12); }
+.drop-zone.correct    { border-color: #00c853; background-color: rgba(0,200,83,0.15); }
+.drop-zone.incorrect  { border-color: #d50000; background-color: rgba(213,0,0,0.1); }
+
+/* ── Continue Button ── */
+.continue-btn {
+  display: none;
+  background-color: #FFFBFB;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px 44px;
+  border-radius: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+.continue-btn.visible { display: inline-block; }
+.continue-btn:hover { background-color: #e8e4e4; transform: translateY(-2px); }
+
+/* ── Quiz Section ── */
+.quiz-section {
+  width: 100%;
+  border-top: 1px solid rgba(26, 0, 73, 0.12);
+}
+
+.quiz-panel {
+  width: 100%;
+  max-height: 460px;
+  overflow-y: auto;
+  background: #f0eef8;
+  color: #1A0049;
+  border-radius: 0;
+  padding: 24px;
+  box-shadow: none;
+}
+
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.quiz-header h3 {
+  font-size: 1.55rem;
+  margin: 0;
+}
+
+.quiz-intro,
+.quiz-scroll-note,
+.quiz-result {
+  line-height: 1.6;
+}
+
+.quiz-scroll-note {
+  font-size: 0.95rem;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  color: #4b2d7f;
+}
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quiz-question {
+  border: 2px solid rgba(26, 0, 73, 0.15);
+  border-radius: 14px;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.quiz-question legend {
+  font-weight: 700;
+  padding: 0 6px;
+}
+
+.quiz-question label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.quiz-question input[type="radio"] {
+  accent-color: #1A0049;
+}
+
+.quiz-result {
+  min-height: 24px;
+  font-weight: 700;
+}
+
+.quiz-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.quiz-submit-btn {
+  padding: 12px 26px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .quiz-panel {
+    padding: 18px;
+    max-height: 520px;
+  }
+
+  .quiz-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .quiz-actions {
+    justify-content: stretch;
+  }
+
+  .quiz-submit-btn {
+    width: 100%;
+  }
+}
+
+/* ── Fullscreen ── */
+#gameContainer:fullscreen { border-radius: 0; max-width: 100%; height: 100vh; display: flex; flex-direction: column; }
+#gameContainer:fullscreen .game-area { flex: 1; justify-content: center; overflow-y: auto; }
